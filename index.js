@@ -41,15 +41,22 @@ Airplane.prototype.land = function () {
 
 //function Person(name,age) {
    const Person=function(name,age){
+     //instances called for
     this.name=name;
     this.age=age;
     this.stomach=[];
     this.eat="somefood";
-    
-};
-//Person.push()
+//Object.prototype.toString()
+Person.prototype.toString(name,age);
+/*const array1 = [1, 2, 'a', '1a'];
 
-//instance  use new when calling a constructor fn
+console.log(array1.toString());
+// expected output: "1,2,a,1a"
+*/
+};
+
+
+
 
 
 /*
@@ -68,13 +75,35 @@ Airplane.prototype.land = function () {
 
 //function Car() {
 const Car=function(model,milesPerGallon){
- // this.model=model;
-  //this.milesPerGallon= mpg;
-  //this.tank=0;
-  //this.odometer=0;
+ this.model=model;
+  this.milesPerGallon= milesPerGallon;
+  this.tank=0;
+  this.odometer=0;
+  this.fill="gallons";
 };
-//const fill= new Car ("fill(gallons)");
+
 //const drive= new Car ("drive(distance");
+//The fill() method changes all elements in an array to a static value, from a start index
+ //(default 0) to an end index (default array.length). It returns the modified array.
+
+/*const array1 = [1, 2, 3, 4];
+
+// fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// expected output: [1, 2, 0, 0]
+
+// fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// expected output: [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// expected output: [6, 6, 6, 6]
+*/
+
+
+
+
+
 
 /*
   TASK 3
@@ -84,6 +113,9 @@ const Car=function(model,milesPerGallon){
         + Should return a string "Playing with x", x being the favorite toy.
 */
 function Baby() {
+  this.name=name;
+  this.age=age;
+  
 
 }
 
@@ -91,10 +123,27 @@ function Baby() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. when a function is contained in global scope, the value of "this" inside of that function will be the window object
+      function greetMe(name){
+        consle.log('Hi' + name);
+        console.log(this);
+      }
+      greetMe('John');
+  2.  when a func is called by a proceeding dot, the object before that dot is this
+          var greetMe={
+            greeting:'Hello',
+            speak:function (name) {
+              console.log(this.greeting + name);
+              console.log(this);
+            }
+          }
+          greetMe.speak('John');
+3. When a constructor function is used, this refers to the specific instance
+ of the object that is created and returned by the constructor function.
+              function GreetMe(name) {
+
+              }
+  4. Whenever call or apply method is used, this is explicitly defined
 */
 
 
