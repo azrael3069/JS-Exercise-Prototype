@@ -43,13 +43,14 @@ Airplane.prototype.land = function () {
    const Person=function(name,age){
     this.name=name;
     this.age=age;
+    this.stomach=[];
+    this.eat="somefood";
+    
 };
 //Person.push()
 
 //instance  use new when calling a constructor fn
-const stomach=[];
-const eat =new Person("eat","someFood");
-const poop=new Person("poop()");
+
 
 /*
   TASK 2
@@ -67,11 +68,13 @@ const poop=new Person("poop()");
 
 //function Car() {
 const Car=function(model,milesPerGallon){
-  this.model=model;
-  this.milesPerGallon= mpg;
+ // this.model=model;
+  //this.milesPerGallon= mpg;
+  //this.tank=0;
+  //this.odometer=0;
 };
-const fill= new Car ("fill(gallons)");
-const drive= new Car ("drive(distance");
+//const fill= new Car ("fill(gallons)");
+//const drive= new Car ("drive(distance");
 
 /*
   TASK 3
