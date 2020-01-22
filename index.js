@@ -39,9 +39,17 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
+//function Person(name,age) {
+   const Person=function(name,age){
+    this.name=name;
+    this.age=age;
+};
+//Person.push()
 
-}
+//instance  use new when calling a constructor fn
+const stomach=[];
+const eat =new Person("eat","someFood");
+const poop=new Person("poop()");
 
 /*
   TASK 2
@@ -57,9 +65,13 @@ function Person() {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
-
-}
+//function Car() {
+const Car=function(model,milesPerGallon){
+  this.model=model;
+  this.milesPerGallon= mpg;
+};
+const fill= new Car ("fill(gallons)");
+const drive= new Car ("drive(distance");
 
 /*
   TASK 3
