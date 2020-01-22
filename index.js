@@ -47,7 +47,7 @@ Airplane.prototype.land = function () {
     this.stomach=[];
     this.eat="somefood";
 //Object.prototype.toString()
-Person.prototype.toString(name,age);
+//Person.prototype.toString(name,age);
 /*const array1 = [1, 2, 'a', '1a'];
 
 console.log(array1.toString());
