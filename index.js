@@ -122,18 +122,18 @@ console.log(array1.fill(6));
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby(name,age,favoriteToy) {
+const Baby=function (name,age,favoriteToy) {
   this.name=name;
   this.age=age;
-  this.favoriteToy=x;
+  this.favoriteToy=favoriteToy;
   //this.play=function()[
     //return 'Playing with x';
   //]
-  
 }
-
-Baby.prototype.toString= function play(){
-return "Playing with" + this.favoritetoy;
+  Baby.prototype.play=function(){
+}
+Baby.prototype.toString=function(){
+  return `Playing with ${this.favoriteToy}`;
 }
 /*Person.prototype.toString=function personToString(){
   return this.name + this.age;  */
