@@ -59,6 +59,7 @@ Person.prototype.eat=function(someFood){
   
 }
 
+
 /**
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
@@ -79,16 +80,13 @@ const Car=function(model,milesPerGallon){
   this.milesPerGallon= milesPerGallon;
   this.tank=0;
   this.odometer=0;
- // this.fill="gallons";
-  this.drive="distance";
-  //this.tank.fill()=  "gallons";
-};
-//Car.prototype.drive = function(distance) {
-  //   this.odometer = this.odometer + distance;
-//}
-/*this.tank = this.tank + gallons;
-}	}
-
+}
+  Car.prototype.fill=function(gallons){
+    this.tank=(gallons);
+  }
+  Car.prototype.drive=function(distance){
+    this.odometer=(i++);
+  }
 
 /*	Car.prototype.drive = function(distance) {
   TASK 3	        this.odometer = this.odometer + distance;
