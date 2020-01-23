@@ -60,8 +60,9 @@ Person.prototype.eat=function(someFood){
   Person.prototype.eat = function(someFood) {
     if (this.stomach.length < 10) { this.stomach.push(someFood);}
       return this.stomach;
-  
-  
+  }
+  Person.prototype.poop = function() {
+    this.stomach = [];
   }
 
 
