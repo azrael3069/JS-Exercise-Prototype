@@ -149,18 +149,19 @@ const Baby=function (name,age,favoriteToy) {
     //return 'Playing with x';
   //]
 }
-  Baby.prototype.play=function(){
-}
-Baby.prototype.toString=function(){
-  return `Playing with ${this.favoriteToy}`;
-}
-Baby.prototype.eat=function(someFood){
-  this.stomach=[i++];
-}
-  Baby.prototype.poop=function() {
-    this.stomach=[i--];
   
+this.play = function() {
+  return `Playing with ${this.favoriteToy}`
 }
+
+
+Baby.prototype = Object.create(Person.prototype);
+
+
+Baby.prototype.play = function() {
+return this.play;
+}	
+
 
 
 
