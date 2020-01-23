@@ -56,8 +56,13 @@ Person.prototype.eat=function(someFood){
 }
   Person.prototype.poop=function() {
     this.stomach=[i--];
+  }
+  Person.prototype.eat = function(someFood) {
+    if (this.stomach.length < 10) { this.stomach.push(someFood);}
+      return this.stomach;
   
-}
+  
+  }
 
 
 /**
@@ -87,6 +92,7 @@ const Car=function(model,milesPerGallon){
   Car.prototype.drive=function(distance){
     this.odometer=(i++);
   }
+  
 
 /*	Car.prototype.drive = function(distance) {
   TASK 3	        this.odometer = this.odometer + distance;
@@ -135,6 +141,17 @@ const Baby=function (name,age,favoriteToy) {
 Baby.prototype.toString=function(){
   return `Playing with ${this.favoriteToy}`;
 }
+Baby.prototype.eat=function(someFood){
+  this.stomach=[i++];
+}
+  Baby.prototype.poop=function() {
+    this.stomach=[i--];
+  
+}
+
+
+
+
 /*Person.prototype.toString=function personToString(){
   return this.name + this.age;  */
 /* 
