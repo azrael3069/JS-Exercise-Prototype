@@ -51,40 +51,15 @@ Airplane.prototype.land = function () {
 Person.prototype.toString=function(){
   return this.name + this.age;
 }
-Person.prototype.eat=function(){
-  return this.stomach['somefood'];
+Person.prototype.eat=function(someFood){
+  this.stomach=[i++];
 }
-Person.eat();
-/*const animals = ['pigs', 'goats', 'sheep'];
-
-const count = animals.push('cows');
-console.log(count);
-// expected output: 4
-console.log(animals);
-// expected output: Array ["pigs", "goats", "sheep", "cows"]
-
-animals.push('chickens', 'cats', 'dogs');
-console.log(animals);
-// expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]  */
-
-/*function Dog(name) {
-  this.name = name;
+  Person.prototype.poop=function() {
+    this.stomach=[i--];
+  
 }
 
-const dog1 = new Dog('Gabby');
-
-Dog.prototype.toString = function dogToString() {
-  return '' + this.name;
-}
-
-console.log(dog1.toString());
-// expected output: "Gabby"  */
-
-
-
-
-
-/*
+/**
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
     - All instances built with Car:
