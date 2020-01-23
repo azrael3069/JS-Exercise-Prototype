@@ -45,21 +45,28 @@ Airplane.prototype.land = function () {
     this.name=name;
     this.age=age;
     this.stomach=[];
-    this.eat="somefood";
+   // const someFood= stomach.push('somefood');
+   }
 //Object.prototype.toString()
-Person.prototype.toString(name,age);
-/*const array1 = [1, 2, 'a', '1a'];
+Person.prototype.toString=function(){
+  return this.name + this.age;
+}
+Person.prototype.eat=function(someFood){
+  this.stomach=[i++];
+}
+  Person.prototype.poop=function() {
+    this.stomach=[i--];
+  }
+  Person.prototype.eat = function(someFood) {
+    if (this.stomach.length < 10) { this.stomach.push(someFood);}
+      return this.stomach;
+  }
+  Person.prototype.poop = function() {
+    this.stomach = [];
+  }
 
-console.log(array1.toString());
-// expected output: "1,2,a,1a"
-*/
-};
 
-
-
-
-
-/*
+/**
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
     - All instances built with Car:
@@ -79,9 +86,31 @@ const Car=function(model,milesPerGallon){
   this.milesPerGallon= milesPerGallon;
   this.tank=0;
   this.odometer=0;
-  this.fill="gallons";
-};
+}
+  
+Car.prototype.fill = function(gallons) {
+  return this.tank += gallons;
+}
 
+Car.prototype.drive = function(distance) {
+
+  const gallons = distance / this.milesPerGallon;
+  if (this.tank >= gallons) {this.odometer += distance; this.tank -= gallons;}
+   else {
+  const fuel = this.tank * this.milesPerGallon;
+  this.tank = 0;
+  this.odometer += fuel;
+
+
+  return `I ran out of fuel at ${this.odometer} miles`
+  }
+}
+
+
+/*	Car.prototype.drive = function(distance) {
+  TASK 3	        this.odometer = this.odometer + distance;
+    - Write a Baby constructor subclassing Person.	        this.tank = this.tank - distance / this.milesPerGallon;
+    - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.	    }*/
 //const drive= new Car ("drive(distance");
 //The fill() method changes all elements in an array to a static value, from a start index
  //(default 0) to an end index (default array.length). It returns the modified array.
@@ -112,13 +141,33 @@ console.log(array1.fill(6));
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+const Baby=function (name,age,favoriteToy) {
   this.name=name;
   this.age=age;
+  this.favoriteToy=favoriteToy;
+  //this.play=function()[
+    //return 'Playing with x';
+  //]
+}
   
-
+this.play = function() {
+  return `Playing with ${this.favoriteToy}`
 }
 
+
+Baby.prototype = Object.create(Person.prototype);
+
+
+Baby.prototype.play = function() {
+return this.play;
+}	
+
+
+
+
+
+/*Person.prototype.toString=function personToString(){
+  return this.name + this.age;  */
 /* 
   TASK 4
 
